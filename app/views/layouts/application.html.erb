@@ -10,6 +10,14 @@
   </head>
 
   <body>
+    <div class="flash" %>
+      <% if flash.any? %>
+        <% flash.each do |type, msg| %>
+          <f><%= "#{type.capitalize}: #{msg}" %></f>
+        <% end %>
+      <% end %>
+    <div>
+    <%= link_to "Kitten Index", kittens_path %> | <%= link_to "Create a Kitten ^^", new_kitten_path %>
     <%= yield %>
   </body>
 </html>

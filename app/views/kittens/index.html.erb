@@ -1,0 +1,5 @@
+<h1>Kitten Index</h1>
+<% @kittens.each do |kitten| %>
+  <%= render kitten %>
+  <%= link_to "Delete kitten :(", kitten_path(kitten), method: 'delete' %><br><br>
+<% end %>
